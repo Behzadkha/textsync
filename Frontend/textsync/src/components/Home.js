@@ -24,11 +24,7 @@ export default function Home() {
             <div>
                 <h1 className="HomeTitle">Share text between your devices easily!</h1>
             </div>
-            <div id="HomeStyle">
-                <h1 id="HomeIAMA">I'm a</h1>
-                <Button id="HomeS">Sender</Button>
-                <Button id="HomeR">Receiver</Button>
-            </div>
+            {checkSR()}
 
         </div>
     )

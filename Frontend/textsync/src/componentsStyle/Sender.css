@@ -1,0 +1,27 @@
+#SFormTitle{
+    margin-top: 3%;
+    color: white;
+    font-size: 120%;
+}
+
+#SFormInput{
+    text-align: center;
+    font-size: 150%;
+}
+
+#SFormBtn{
+    width: 100%;
+    font-size: 120%;
+}
+
+#SForm{
+    width: 50%;
+    margin: auto;
+}
+
+#Sinfo{
+    color: white;
+    font-size: 80%;
+    margin-top: 0.5%;
+    text-align: center;
+}
