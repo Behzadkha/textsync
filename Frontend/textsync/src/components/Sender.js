@@ -6,12 +6,23 @@ import axios from 'axios'
 
 export default function Sender() {
     const [Stext, setStext] = useState("")
-
+    const [code, setcode] = useState("")
     const SendText = e => {
         e.preventDefault();
         axios.post(`${config.dev_server}/sender`, {text: Stext}).then((res) => {
-            console.log(res.data.code)
+            setcode(res.data.code)
         })
+    }
+
+    function RenderCode(){
+        if(code !== ""){
+            return(
+                <div id="Scode">
+                    <h2>Your code is:</h2>
+                    <h3 id="ScodeFont">{code}</h3>
+                </div>
+            )
+        }
     }
 
     return (
@@ -24,7 +35,7 @@ export default function Sender() {
                 <Button variant="primary" type="submit" id="SFormBtn" >Send</Button>
                 <h1 id="Sinfo">All texts will be deleted after clicking on the confirm button(recipient side)</h1>
             </Form>
-
+            {RenderCode()}
         </div>
     )
 }

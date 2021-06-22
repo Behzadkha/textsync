@@ -25,3 +25,17 @@
     margin-top: 0.5%;
     text-align: center;
 }
+
+#Scode{
+    margin-top: 5%;
+    color: white;
+    text-align: center;
+}
+
+#ScodeFont{
+    color: black;
+    width: 50%;
+    background-color: #F0FFF0;
+    font-size: 250%;
+    margin: auto;
+}
