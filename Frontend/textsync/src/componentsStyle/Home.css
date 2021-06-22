@@ -3,3 +3,26 @@
     text-align: center;
     margin-top: 13%;
 }
+
+#HomeStyle{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+#HomeIAMA{
+    margin-top: 3%;
+    color: white;
+    font-size: 150%;
+}
+#HomeS{
+    width: 60%;
+    font-size: 150%;
+    font-weight: 550;
+}
+#HomeR{
+    margin-top: 1%;
+    width: 60%;
+    font-size: 150%;
+    font-weight: 550;
+}
