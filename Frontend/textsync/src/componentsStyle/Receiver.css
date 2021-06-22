@@ -1,0 +1,25 @@
+.RInput{
+    width: 30%;
+    text-align: center;
+    font-size: 150%;
+    margin: auto;
+}
+
+#RForm{
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+#RFormTitle{
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    font-size: 120%;
+    color: white;
+}
+
+#RFormBtn{
+    margin: auto;
+    width: 30%;
+}
