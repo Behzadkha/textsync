@@ -12,7 +12,7 @@ const codeSchema = require('./CodeSchema');
 
 (async () => {
     try{
-        await mongoose.connect(config.database, {useNewUrlParser: true, useUnifiedTopology: true})
+        await mongoose.connect(config.database, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
     }
     catch (e){
         throw e;
@@ -24,16 +24,23 @@ app.post('/sender', (req,res) =>{
     const data = {
         code: randomNumber,
         text: req.body.text,
-        textReceived: false
+        textReceived: false,
     }
     let newText = new codeSchema(data)
     newText.save(err => {
         if(err) res.status(400).json(err)
-        console.log("added")
     })
-    
-
     res.status(200).json({code: randomNumber})
+    
+})
+
+app.post('/receiver', (req,res) => {
+    codeSchema.findOneAndDelete({code: req.body.code}, (err, Stext) => {
+        if(err){
+            return res.json({text: "failed to find the text"})
+        }
+        return res.status(200).json({text: Stext.text});
+    })
 })
 
 app.listen(PORT, () => {

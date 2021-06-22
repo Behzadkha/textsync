@@ -10,7 +10,9 @@ let Code = new Schema({
     textReceived:{
         type: Boolean,
         default: false
-    }
-})
+    },
+    createdAt: {type: Date, default: Date.now}
 
+})
+Code.index({ createdAt: 1}, {expireAfterSeconds: 1200})
 module.exports = mongoose.model('Code', Code, 'codes',);

@@ -12,6 +12,9 @@ export default function Sender() {
         axios.post(`${config.dev_server}/sender`, {text: Stext}).then((res) => {
             setcode(res.data.code)
         })
+        .catch(err => {
+            console.log(err)
+        })
     }
 
     function RenderCode(){
@@ -33,7 +36,7 @@ export default function Sender() {
                     <Form.Control className="SFormInput" type="text" placeholder="A very long text" onChange={(e) => setStext(e.target.value)}/>
                 </Form.Group>
                 <Button variant="primary" type="submit" id="SFormBtn" >Send</Button>
-                <h1 id="Sinfo">All texts will be deleted after clicking on the confirm button(recipient side)</h1>
+                <h1 id="Sinfo">All texts will be deleted after receiving it or 2h</h1>
             </Form>
             {RenderCode()}
         </div>
