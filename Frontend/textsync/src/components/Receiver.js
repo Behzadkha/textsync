@@ -13,7 +13,6 @@ export default function Receiver() {
     const GetText = e => {
         e.preventDefault();
         axios.post(`${config.dev_server}/receiver`, { code: Rcode }).then((res) => {
-            console.log(res.data.text)
             setRtext(res.data.text)
         })
             .catch(err => {
@@ -26,7 +25,7 @@ export default function Receiver() {
             return (
                 <div id={isMobile ? "ScodeMob" : "Scode"}>
                         <h2 id={isMobile ? "RYourTextIs" : ''}>Your text is:</h2>
-                        <textarea id={isMobile ? "RcodeFontMob" : "RcodeFont"}>{Rtext}</textarea>
+                        <textarea id={isMobile ? "RcodeFontMob" : "RcodeFont"} value={Rtext} readOnly/>
                         <h1 id="Rinfo">Your text is now deleted from the database</h1>
                 </div>
             )
