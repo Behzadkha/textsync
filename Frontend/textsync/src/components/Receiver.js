@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap'
 import '../componentsStyle/Receiver.css'
 import axios from 'axios'
 import { config } from '../env';
+import {isMobile} from "react-device-detect"
 
 export default function Receiver() {
     const [Rcode, setRcode] = useState("")
@@ -23,10 +24,10 @@ export default function Receiver() {
     function RenderText() {
         if (Rtext !== "") {
             return (
-                <div id="Scode">
-                        <h2>Your text is:</h2>
-                        <textarea id="ScodeFont">{Rtext}</textarea>
-                        <h1 id="Sinfo">Your text is now deleted from the database</h1>
+                <div id={isMobile ? "ScodeMob" : "Scode"}>
+                        <h2 id={isMobile ? "RYourTextIs" : ''}>Your text is:</h2>
+                        <textarea id={isMobile ? "RcodeFontMob" : "RcodeFont"}>{Rtext}</textarea>
+                        <h1 id="Rinfo">Your text is now deleted from the database</h1>
                 </div>
             )
         }
@@ -34,12 +35,12 @@ export default function Receiver() {
 
     return (
         <div>
-            <Form id="RForm" onSubmit={GetText}>
+            <Form id={isMobile ? "RFormMob" : "RForm"} onSubmit={GetText}>
                 <Form.Group controlId="formBasicEmail">
-                    <Form.Label id="RFormTitle">Enter the code here</Form.Label>
-                    <Form.Control className="RInput" type="text" placeholder="129" onChange={e => setRcode(e.target.value)} />
+                    <Form.Label id={isMobile ? "RFormTitleMob" : "RFormTitle"}>Enter the code here</Form.Label>
+                    <Form.Control className={isMobile ? "RInputMob" : "RInput"} type="text" placeholder="129" onChange={e => setRcode(e.target.value)} />
                 </Form.Group>
-                <Button variant="primary" type="submit" id="RFormBtn" >Get</Button>
+                <Button variant="primary" type="submit" id={isMobile ? "RFormBtnMob" : "RFormBtn"} >Get</Button>
             </Form>
             {RenderText()}
         </div>

@@ -5,6 +5,8 @@
 }
 
 .SFormInput{
+    width: 100%;
+    margin: auto;
     text-align: center;
     font-size: 150%;
 }
@@ -27,7 +29,7 @@
 }
 
 #Scode{
-    margin-top: 5%;
+    margin-top: 1%;
     color: white;
     text-align: center;
 }
@@ -37,5 +39,32 @@
     width: 50%;
     background-color: #F0FFF0;
     font-size: 250%;
+    margin: auto;
+}
+
+
+#SFormMob{
+    width: 80%;
+    margin: auto;
+}
+#SFormTitleMob{
+    margin-top: 5%;
+    color: white;
+    font-size: 100%;
+}
+.SFormInputMob{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 100%;
+}
+#YourCodeIsMob{
+    font-size: 150%;
+}
+#ScodeFontMobile{
+    color: black;
+    width: 50%;
+    background-color: #F0FFF0;
+    font-size: 200%;
     margin: auto;
 }

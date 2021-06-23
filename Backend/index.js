@@ -36,7 +36,7 @@ app.post('/sender', (req,res) =>{
 
 app.post('/receiver', (req,res) => {
     codeSchema.findOneAndDelete({code: req.body.code}, (err, Stext) => {
-        if(err){
+        if(err || Stext === null){
             return res.json({text: "failed to find the text"})
         }
         return res.status(200).json({text: Stext.text});

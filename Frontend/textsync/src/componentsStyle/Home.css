@@ -1,7 +1,15 @@
+#Homepageimagediv{
+    margin-top: 4%;
+    text-align: center;
+}
+#Homepageimage{
+    width: 20%;
+}
+
 .HomeTitle{
     color: white;
     text-align: center;
-    margin-top: 13%;
+    margin-top: 5%;
 }
 
 #HomeStyle{
@@ -25,4 +33,37 @@
     width: 60%;
     font-size: 150%;
     font-weight: 550;
+}
+#Behzad{
+    text-align: right;
+    color: white;
+    font-size: xx-large;
+}
+
+
+#HomepageimageMob{
+    width: 70%;
+    margin-top: 25%;
+}
+.HomeTitleMob{
+    color: white;
+    text-align: center;
+    margin-top: 40%;
+    font-size: large;
+}
+#HomeIAMAMob{
+    margin-top: 15%;
+    color: white;
+    font-size: 100%;
+}
+#HomeSMob{
+    width: 100%;
+    font-size: 120%;
+    font-weight: 400;
+}
+#HomeRMob{
+    margin-top: 5%;
+    width: 100%;
+    font-size: 120%;
+    font-weight: 400;
 }

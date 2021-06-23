@@ -11,8 +11,6 @@ let Code = new Schema({
         type: Boolean,
         default: false
     },
-    createdAt: {type: Date, default: Date.now}
-
-})
-Code.index({ createdAt: 1}, {expireAfterSeconds: 1200})
+}, {timestamps: true})
+Code.index({ "createdAt": 1 }, { expireAfterSeconds: 1800 })
 module.exports = mongoose.model('Code', Code, 'codes',);
