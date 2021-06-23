@@ -12,7 +12,7 @@ const codeSchema = require('./CodeSchema');
 
 (async () => {
     try{
-        await mongoose.connect(config.database, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
+        await mongoose.connect(process.env.database || config.database, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
     }
     catch (e){
         throw e;
